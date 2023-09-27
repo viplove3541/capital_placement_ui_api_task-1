@@ -23,7 +23,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Create shortener app with shrtcode api, so we just need to fetch data from the api and add long url as a parameter and then we get the shortener url, so simple. we also try to implement copy to clipboard functionality with react-copy-to-clipboard package.
+This project assignment was given by Capital Placement for FE intern task where we can show the knowledge and tech skill of frontend tools like React.js,
+Tailwind.css,API integration and UI design. This project serves as an excellent opportunity for me to showcase and enhance my expertise in React, API integration, and UI design. It provides a holistic platform to demonstrate my ability to harmoniously combine these skills to develop a resilient and user-centric application.
 
 Features include:
 - Built with React.js ✨
