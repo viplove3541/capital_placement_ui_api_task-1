@@ -14,7 +14,7 @@
     <a href="https://github.com/viplove3541/capital_placement_ui_api_task-1"><strong>Explore the project »</strong></a>
     <br />
     <br />
-    <a href="https://viplove-url-shortener.netlify.app/">View Demo Site</a>
+    <a href="https://capital-placement-ui-api-task-1.vercel.app/">View Demo Site</a>
     .
     ·
     <a href="https://github.com/viplove3541/capital_placement_ui_api_task-1/issues">Request Feature</a>
