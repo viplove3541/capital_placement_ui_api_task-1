@@ -17,7 +17,7 @@
     <a href="https://viplove-url-shortener.netlify.app/">View Demo Site</a>
     .
     ·
-    <a href="https://github.com/viplove3541/url-shortener/issues">Request Feature</a>
+    <a href="https://github.com/viplove3541/capital_placement_ui_api_task-1/issues">Request Feature</a>
   </p>
 </div>
 
