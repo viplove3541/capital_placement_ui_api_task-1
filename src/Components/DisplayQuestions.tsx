@@ -1,42 +1,45 @@
+// Import necessary libraries and icons.
 import { useState, useRef } from 'react';
 import { FiEdit2 } from 'react-icons/fi';
 import { IoRemove, IoCloseSharp } from 'react-icons/io5';
 import { BiMenu, BiPlusMedical } from 'react-icons/bi';
 import { IQuestionTemplate } from '../utils/interface';
 
-function DisplayQuestions(
-    {
-        questions,
-        editQues,
-        deleteQues,
-      }: {
-        questions: [IQuestionTemplate];
-        editQues: (value: IQuestionTemplate) => void;
-        deleteQues: (id: string) => void;
-      }) {
+// Define the DisplayQuestions component.
+function DisplayQuestions({
+  questions,
+  editQues,
+  deleteQues,
+}: {
+  questions: [IQuestionTemplate];
+  editQues: (value: IQuestionTemplate) => void;
+  deleteQues: (id: string) => void;
+}) {
+  return (
+    <div className="flex flex-col gap-4 w-full px-6 pb-12 pt-0">
+      {questions.map((ques) => (
+        <Question ques={ques} editQues={editQues} deleteQues={deleteQues} />
+      ))}
+    </div>
+  );
+}
 
+// Define the Question component.
+const Question = ({
+  ques,
+  editQues,
+  deleteQues,
+}: {
+  ques: IQuestionTemplate;
+  editQues: (value: IQuestionTemplate) => void;
+  deleteQues: (id: string) => void;
+}) => {
+  // Create a reference to an input element for choices.
+  const choicesRef = useRef<HTMLInputElement>(null);
 
-    return (
-        <div className="flex flex-col gap-4 w-full px-6 pb-12 pt-0">
-          {questions.map((ques) => (
-            <Question ques={ques} editQues={editQues} deleteQues={deleteQues} />
-          ))}
-        </div>
-      );
-    }
-    
-    const Question = ({
-      ques,
-      editQues,
-      deleteQues,
-    }: {
-      ques: IQuestionTemplate;
-      editQues: (value: IQuestionTemplate) => void;
-      deleteQues: (id: string) => void;
-    }) => {
-      const choicesRef = useRef<HTMLInputElement>(null);
-      const [isOpened, setIsOpened] = useState(false);
-      const [question, setQues] = useState<IQuestionTemplate>({ ...ques });
+  // State variables.
+  const [isOpened, setIsOpened] = useState(false);
+  const [question, setQues] = useState<IQuestionTemplate>({ ...ques });
     
       return (
         <div className="flex flex-col w-full px-2 py-5 ">

@@ -1,3 +1,4 @@
+// Import necessary libraries and icons.
 import { useState, useRef } from 'react';
 import { BiPlusMedical, BiMenu } from 'react-icons/bi';
 import { IoCloseSharp, IoRemove } from 'react-icons/io5';
@@ -5,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { IQuestionTemplate} from '../utils/interface';
 import { QuesTypes } from '../utils/data';
 
+// Define the AddQuestions component.
 const AddQuestions = ({ setQuestion }: { setQuestion: (value: any) => void }) => {
 
     const choicesRef = useRef<HTMLInputElement>(null);
@@ -15,6 +17,7 @@ const AddQuestions = ({ setQuestion }: { setQuestion: (value: any) => void }) =>
       question: '',
     });
   
+    // Function to handle clicking outside the modal.
     const handleClickOutside = (event: any) => {
       if (event.target.closest('#questionModal') === null) {
         setIsOpened(false);
